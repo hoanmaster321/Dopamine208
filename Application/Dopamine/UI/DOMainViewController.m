@@ -248,7 +248,7 @@
 }
 
 -(void)setupUpdateAvailable:(BOOL)environmentUpdate
-{
+{/*
     if (self.jailbreakBtn.didExpand)
         return;
 
@@ -282,6 +282,7 @@
         [self.updateButton setTransform:CGAffineTransformIdentity];
         [self.updateButton setAlpha:1];
     } completion:nil];
+    */
 }
 
 -(void)simulateJailbreak
