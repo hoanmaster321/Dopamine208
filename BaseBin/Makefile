@@ -80,8 +80,7 @@ basebin.tc: subprojects
 	cp .build/basebin.tc basebin.tc
 
 basebin.tar: basebin.tc
-	@tar -cf basebin.tar -C .build .
-	@cp .build/basebin.tc basebin.tc
+	@DYLD_FALLBACK_LIBRARY_PATH="." ./tar --transform "s/^.build/basebin/" -cvf "basebin.tar" ".build" --owner=0 --group=0
 
 clean:
 	@$(MAKE) -C ChOma $@
